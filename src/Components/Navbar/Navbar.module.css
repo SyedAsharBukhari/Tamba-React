@@ -1,0 +1,27 @@
+.navbarmain{
+    color: white;
+    margin: 20px;
+}
+.links{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 80px;
+    align-items: center;
+margin: 0;
+}
+.linksmain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 17px;
+}
+.Logomain{
+    display: flex;
+    align-items: center;
+gap: 15px;
+}
+.logo{
+font-size: 32px;
+}

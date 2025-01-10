@@ -1,0 +1,13 @@
+
+
+.button{
+background-color: transparent;
+padding: 12px 22px;
+border: 1px solid white;
+border-radius: 40px;
+display: flex;
+align-items: center;
+gap: 10px;
+color: white;    
+font-weight: 500;
+}

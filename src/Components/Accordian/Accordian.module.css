@@ -1,0 +1,83 @@
+.accordion {
+    width: 100%;
+    max-width: 470px;
+  }
+  
+  .panelLabel {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 25px 60px 25px 25px;
+    font-weight: 500;
+    font-size: 30px;
+    font-family: inherit;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+    cursor: pointer;
+    color: white;
+  }
+  
+  .panelLabel:focus {
+    outline: none;
+  }
+  
+  .panelLabel:after,
+  .panelLabel:before {
+    content: '';
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    width: 22px;
+    height: 2px;
+    margin-top: -1px;
+    background-color: #D8C481;
+  }
+  
+  .panelLabel:before {
+    transform: rotate(-90deg);
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); /* More gradual rotation */
+  }
+  
+  .panel[aria-expanded='true'] .panelLabel {
+    color: #D8C481;
+  }
+  
+  .panel[aria-expanded='true'] .panelLabel:before {
+    transform: rotate(0deg);
+  }
+  
+  .panelInner {
+    overflow: hidden;
+    will-change: height;
+    transition: height 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); /* More gradual expansion */
+    height: 0; /* Collapsed height */
+  }
+  
+  .panelContent {
+    margin: 5px 25px 25px;
+    font-size: 18px;
+    color: #E7D3F8;
+    opacity: 0; /* Hidden content */
+    transition: opacity 0.4s ease 0.2s; /* Delay for smoother fade-in */
+  }
+  
+  .panel:not(:last-child) {
+    margin-bottom: 3px;
+  }
+  
+  /* When the panel is expanded, change opacity and height */
+  .panel[aria-expanded='true'] .panelContent {
+    opacity: 1;
+  }
+  
+  .panel[aria-expanded='false'] .panelInner {
+    transition: height 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); /* Gradual closing */
+    height: 0; /* Collapsed height */
+  }
+  
+  .panel[aria-expanded='true'] .panelInner {
+    height: auto; /* Expand to fit content */
+  }
+  
