@@ -15,6 +15,9 @@ import image6 from '../../images/Mask group (1).webp'
 import image7 from '../../images/Mask group (2).webp'
 
 function Home() {
+const imagesection = [image1, image2, image3, image4, image6, image7]
+
+
   return (
   <>
 <Navbar/>
@@ -52,15 +55,16 @@ function Home() {
 
 {/* third section start */}
 <marquee className={css.marquemain}>
-<img src={image1}/>
-<img src={image2}/>
-<img src={image3}/>
-<img src={image4}/>
-<img src={image6}/>
-<img src={image7}/>
+{imagesection.map((image) => 
+  <img src={image }/>)}
 </marquee>
 {/* third section end */}
+
  
+{/* fourth section start */}
+
+{/* fourth section end */}
+
   </>
   )
 }
